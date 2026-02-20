@@ -13,7 +13,7 @@ class LeaveRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = LeaveRequest
         fields = ['id', 'employee', 'employee_details', 'type_conge', 'date_debut', 
-                  'date_fin', 'raison', 'statut', 'created_at']
+                  'date_fin', 'raison', 'statut', 'rejection_reason', 'created_at']
         read_only_fields = ['created_at']
     
     def validate(self, data):
